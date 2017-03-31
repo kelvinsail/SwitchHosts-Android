@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SwitchHosts</string>
+
+    <!-- Menu -->
+    <string name="action_edit">编辑</string>
+    <string name="action_selection_mode">选择模式</string>
+    <string name="action_save">保存</string>
+    <string name="action_save_as">另存为</string>
+    <string name="action_check_current_hosts">查看当前Hosts</string>
+
+    <!-- 默认时间格式 -->
+    <string name="date_format_default">yyyy/MM/dd hh:mm:ss</string>
+    <string name="date_format_for_file">yyyy_MM_dd_hh_mm_ss</string>
+
+    <!-- 通用 -->
+    <string name="measure">确定</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="add_new">添加</string>
+    <string name="next">下一个</string>
+    <string name="delete">删除</string>
+    <string name="to_alert">修改</string>
+
+    <!-- 主界面 -->
+    <string name="confirm_to_replace_from_this_host">是否切换到该Hosts</string>
+    <string name="confirm_to_delete_this_host">是否删除该Hosts</string>
+    <string name="hosts_menu_check">查看</string>
+    <string name="hosts_menu_delete">删除</string>
+    <string name="hosts_menu_use_this">切换</string>
+    <string name="hosts_menu_rename">重命名</string>
+    <string name="switch_hosts_success">切换成功，部分手机需要重启方能生效</string>
+    <string name="switch_hosts_fail_witout_root">切换失败，请检查是否已root授权</string>
+    <string name="switch_hosts_fail">切换失败</string>
+    <string name="no_storage_permission">获取文件读写权限失败，请允许app读写、保存host文件！</string>
+
+    <!-- 修改/新建Hosts -->
+    <string name="system_hosts">System Hosts</string>
+    <string name="edit_hosts">编辑Hosts</string>
+    <string name="new_hosts">新建Hosts</string>
+    <string name="hosts_file_name">Hosts文件名</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+    <string name="input_file_name_tips">请输入文件名</string>
+    <string name="input_file_existed_tips">文件已存在</string>
+
+</resources>

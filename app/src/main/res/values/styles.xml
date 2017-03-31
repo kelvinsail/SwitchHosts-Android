@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="item_click_background">@drawable/background_item_white2gray</item>
+        <item name="item_click_background_transparent">@drawable/background_item_trans2gray</item>
+        <item name="loading_dialog_progress_bar_style">@style/Loading.ProgressBar</item>
+        <item name="loading_dialog_background">@color/background_main</item>
+        <item name="loading_dialog_text_color">@color/text_black</item>
+        <item name="loading_dialog_text_size">@dimen/text_small</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextView"></style>
+
+    <style name="TextView.CheckHosts">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle</item>
+    </style>
+
+    <style name="TextView.Menu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/item_click_background_transparent</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle</item>
+    </style>
+
+    <style name="TextView.SelectionHosts">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:padding">@dimen/padding_normal</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_middle</item>
+    </style>
+
+</resources>

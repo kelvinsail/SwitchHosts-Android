@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+// 获取时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.default)
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.yifan.switchhosts"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 100200//前4位为版本号，最后两位为修订号
+        versionName "1.0.0.2"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //apk名字
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        //设置apk输出的文件名
+                        def fileName;
+                        def i = 0;
+                        File file;
+                        for (; ;) {
+                            def outputTimes = i > 0 ? "_" + i : "";//apk输出次数
+                            fileName = defaultConfig.applicationId + "_${defaultConfig.versionName}(${defaultConfig.versionCode})" + outputTimes + ".apk"
+                            file = new File(outputFile.parent + "/apk_/", fileName);
+                            if (!file.exists()) {
+                                break;
+                            }
+                            i++;
+                        }
+                        output.outputFile = file;
+                    }
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile project(':libraries:utils')
+}

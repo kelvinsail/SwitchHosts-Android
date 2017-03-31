@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="item_hosts_menu">
+        <item>@string/hosts_menu_check</item>
+        <item>@string/hosts_menu_delete</item>
+        <item>@string/hosts_menu_rename</item>
+        <item>@string/hosts_menu_use_this</item>
+    </string-array>
+</resources>

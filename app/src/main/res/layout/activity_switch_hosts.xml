@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.yifan.switchhosts.widget.PullToRefreshLayout
+        android:id="@+id/pulltorefresh_switch_hosts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- hosts 列表，被一个下拉刷新列表包裹-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_switch_hosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/padding_large"/>
+
+    </com.yifan.switchhosts.widget.PullToRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_switch_hosts_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_add"/>
+</FrameLayout>
+
+
